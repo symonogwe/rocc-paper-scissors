@@ -19,7 +19,6 @@ function playRound(playerSelection, computerSelection) {
       return "You Win! Scissors beats paper";
     if ((playerSelection === "paper") && (computerSelection === "Scissors"))
       return "You Loose! Scissors beats paper";
-    
 }
 
 
