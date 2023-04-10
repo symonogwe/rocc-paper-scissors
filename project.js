@@ -19,8 +19,12 @@ function playRound(playerSelection, computerSelection) {
       return "You Win! Scissors beats paper";
     if ((playerSelection === "paper") && (computerSelection === "Scissors"))
       return "You Loose! Scissors beats paper";
+    return "That's a Tie!"
 }
 
+const playerSelection = "rock";
+const computerSelection = getComputerChoice();
 
+console.log(playRound(playerSelection, computerSelection));
 
 
