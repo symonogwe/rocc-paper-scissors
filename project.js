@@ -22,7 +22,7 @@ function playRound(playerSelection, computerSelection) {
     return "That's a Tie!"
 }
 
-const playerSelection = "rock";
+const playerSelection = "PAper".toLowerCase();
 const computerSelection = getComputerChoice();
 
 console.log(playRound(playerSelection, computerSelection));
