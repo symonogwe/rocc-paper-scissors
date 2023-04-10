@@ -6,4 +6,9 @@ function getComputerChoice() {
     return choice;
 }
 
+function playGame(playerSelection, computerSelection) {
+    if (playerSelection === "rock" && computerSelection === "paper")
+      return "You Loose! Paper beats Rock";   
+}
+
 console.log(getComputerChoice());
