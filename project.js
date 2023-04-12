@@ -22,12 +22,26 @@ function playRound(playerSelection, computerSelection) {
   return "That's a Tie!";
 }
 
+function userInput() {
+  let input = false;
+  while (input == false) {
+    const choice = prompt("Rock Paper Scissors");
+    if(choice == null) {
+      continue;
+    }
+    const choiceInLower = choice.toLowerCase();
+    if (choiceInLower == "scissors" || choiceInLower == "rock" || choiceInLower == "paper") {
+      input = true;
+      return choiceInLower;
+    }
+  }
+}
 
 function game() {
   let playerScore = 0;
   let computerScore = 0;
   for (let i = 0; i < 5; i++) {
-    let playerSelection = "PapER".toLowerCase();
+    let playerSelection = userInput();
     let computerSelection = getComputerChoice();
     let result = (playRound(playerSelection, computerSelection));
     console.log(result);
@@ -38,11 +52,11 @@ function game() {
       computerScore++;
   }
   console.log("GAME OVER");
-  if (playerScore > computerScore) console.log("Player Wins");
-  else if (playerScore < computerScore) console.log("Computer Wins");
-  else console.log("That's a Tie");
+  console.log("------------------------------------------");
+  if (playerScore > computerScore) return "Player Wins";
+  else if (playerScore < computerScore) return "Computer Wins";
+  else return "That's a Tie";
 }
-
 
 
 console.log(game());
