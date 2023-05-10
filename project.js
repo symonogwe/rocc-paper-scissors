@@ -35,10 +35,11 @@ function game() {
       let playerSelection = button.textContent;
       let computerSelection = getComputerChoice();
       let result = (playRound(playerSelection, computerSelection));
-      console.log(result);
+      let resultDiv = document.querySelector(".result");
+      resultDiv.textContent = result;
     });
   })
-  // console.log("---------------------------------------");
+  
   // if (result === "You Win! Paper beats Rock" || result === "You Win! rock beats Scissors" || result === "You Win! Scissors beats paper")
   //   playerScore++;
   // if (result === "You Loose! Paper beats Rock" || result === "You Loose! Rock beats scissors" || result === "You Loose! Scissors beats paper")
