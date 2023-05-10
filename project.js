@@ -23,35 +23,38 @@ function playRound(playerSelection, computerSelection) {
 }
 
 
+
+
+
 function game() {
   let playerScore = 0;
   let computerScore = 0;
-  
-  let playerSelection
-  let computerSelection = getComputerChoice();
-  let result = (playRound(playerSelection, computerSelection));
-  console.log(result);
-  console.log("---------------------------------------");
-  if (result === "You Win! Paper beats Rock" || result === "You Win! rock beats Scissors" || result === "You Win! Scissors beats paper")
-    playerScore++;
-  if (result === "You Loose! Paper beats Rock" || result === "You Loose! Rock beats scissors" || result === "You Loose! Scissors beats paper")
-    computerScore++;
+  const buttons = document.querySelectorAll(".button");
+  buttons.forEach(button => {
+    button.addEventListener("click", () => {
+      let playerSelection = button.textContent;
+      let computerSelection = getComputerChoice();
+      let result = (playRound(playerSelection, computerSelection));
+      console.log(result);
+    });
+  })
+  // console.log("---------------------------------------");
+  // if (result === "You Win! Paper beats Rock" || result === "You Win! rock beats Scissors" || result === "You Win! Scissors beats paper")
+  //   playerScore++;
+  // if (result === "You Loose! Paper beats Rock" || result === "You Loose! Rock beats scissors" || result === "You Loose! Scissors beats paper")
+  //   computerScore++;
 
 
   
-  console.log("GAME OVER");
-  console.log("------------------------------------------");
-  if (playerScore > computerScore) return "Player Wins";
-  else if (playerScore < computerScore) return "Computer Wins";
-  return "That's a Tie";
+  // console.log("GAME OVER");
+  // console.log("------------------------------------------");
+  // if (playerScore > computerScore) return "Player Wins";
+  // else if (playerScore < computerScore) return "Computer Wins";
+  // return "That's a Tie";
 }
+game();
 
 
-console.log(game());
 
-const buttons = document.querySelectorAll(".button");
-buttons.forEach(button => {
-  button.addEventListener("click", game);
-});
 
 
