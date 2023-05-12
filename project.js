@@ -50,6 +50,7 @@ function game() {
         const player = document.querySelector(".player-score");
         player.textContent = playerScore;
       }
+      // code for when player reaches 5 points
       if (playerScore === 5) {
         let hidden = document.querySelectorAll("button");
         hidden.forEach(button => {
@@ -62,7 +63,15 @@ function game() {
         const playerWinner = document.createElement("div");
         playerWinner.textContent = "Player wins the Game!";
         container.appendChild(playerWinner);
+        let replay = document.createElement("button");
+        replay.textContent = "Play again";
+        replay.addEventListener("click", () => {
+          window.location.reload();
+        });
+        container.appendChild(replay);
+
       }
+      // code for when computer reaches 5 points
       else if (computerScore === 5) {
         let hidden = document.querySelectorAll("button");
         hidden.forEach(button => {
@@ -75,12 +84,16 @@ function game() {
         const computerWinner = document.createElement("div");
         computerWinner.textContent = "Computer wins the Game!";
         container.appendChild(computerWinner);
+        let replay = document.createElement("button");
+        replay.textContent = "Play Again";
+        replay.addEventListener("click", () => {
+          window.location.reload();
+        });
+        container.appendChild(replay);
       }
     });
   });
 }
-
-
 
 game ();
 
