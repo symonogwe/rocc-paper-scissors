@@ -50,9 +50,36 @@ function game() {
         const player = document.querySelector(".player-score");
         player.textContent = playerScore;
       }
+      if (playerScore === 5) {
+        let hidden = document.querySelectorAll("button");
+        hidden.forEach(button => {
+          button.style.visibility = "hidden";
+        });
+        document.querySelector(".choice").style.visibility = "hidden";
+        document.querySelector(".player-score").style.visibility = "hidden";
+        document.querySelector(".computer-score").style.visibility = "hidden";
+        let container = document.querySelector(".container");
+        const playerWinner = document.createElement("div");
+        playerWinner.textContent = "Player wins the Game!";
+        container.appendChild(playerWinner);
+      }
+      else if (computerScore === 5) {
+        let hidden = document.querySelectorAll("button");
+        hidden.forEach(button => {
+          button.style.visibility = "hidden";
+        });
+        document.querySelector(".choice").style.visibility = "hidden";
+        document.querySelector(".player-score").style.visibility = "hidden";
+        document.querySelector(".computer-score").style.visibility = "hidden";
+        let container = document.querySelector(".container");
+        const computerWinner = document.createElement("div");
+        computerWinner.textContent = "Computer wins the Game!";
+        container.appendChild(computerWinner);
+      }
     });
   });
 }
+
 
 
 game ();
