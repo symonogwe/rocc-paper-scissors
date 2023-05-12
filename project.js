@@ -35,17 +35,19 @@ function game() {
       let playerSelection = button.textContent;
       let computerSelection = getComputerChoice();
       let result = playRound(playerSelection, computerSelection);
-      //Change choice text to result of round
+      //Display result of round on DOM
       const choice = document.querySelector(".choice");
       choice.textContent = result;
       // increment computer score if computer wins
-      if (result === "You Loose! Paper beats Rock" || result === "You Loose! Rock beats scissors" || result === "You Loose! Scissors beats paper") {
+      if (result === "You Loose! Paper beats Rock" || result === "You Loose! Rock beats scissors" || 
+      result === "You Loose! Scissors beats paper") {
         computerScore++;
         const computer = document.querySelector(".computer-score");
         computer.textContent = computerScore;
       }
       // increment player score if player wins
-      if (result === "You Win! Paper beats Rock" || result === "You Win! rock beats Scissors" || result === "You Win! Scissors beats paper") {
+      if (result === "You Win! Paper beats Rock" || result === "You Win! rock beats Scissors" || 
+      result === "You Win! Scissors beats paper") {
         playerScore++;
         const player = document.querySelector(".player-score");
         player.textContent = playerScore;
