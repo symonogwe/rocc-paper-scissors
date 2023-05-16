@@ -9,17 +9,17 @@ function getComputerChoice() {
 //result for a single round played
 function playRound(playerSelection, computerSelection) {
   if ((playerSelection === "rock") && (computerSelection === "Paper"))
-    return "You Loose! Paper beats Rock";   
+    return "You Loose this round Paper beats Rock";   
   if ((playerSelection === "paper") && (computerSelection === "Rock"))
-    return "You Win! Paper beats Rock";
+    return "You Win this round Paper beats Rock";
   if ((playerSelection === "rock") && (computerSelection === "Scissors"))
-    return "You Win! rock beats Scissors";
+    return "You Win this round rock beats Scissors";
   if ((playerSelection === "scissors") && (computerSelection === "Rock"))
-    return "You Loose! Rock beats scissors";
+    return "You Loose this round Rock beats scissors";
   if ((playerSelection === "scissors") && (computerSelection === "Paper"))
-    return "You Win! Scissors beats paper";
+    return "You Win this round Scissors beats paper";
   if ((playerSelection === "paper") && (computerSelection === "Scissors"))
-    return "You Loose! Scissors beats paper";
+    return "You Loose this round Scissors beats paper";
   return "That's a Tie!";
 }
 
