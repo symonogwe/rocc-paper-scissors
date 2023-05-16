@@ -59,12 +59,16 @@ function game() {
           button.style.visibility = "hidden";
         });
         document.querySelector(".choice").style.visibility = "hidden";
-        document.querySelector(".player-score").style.visibility = "hidden";
-        document.querySelector(".computer-score").style.visibility = "hidden";
+        document.querySelector(".scores").style.visibility = "hidden";
+
         let container = document.querySelector(".container");
+        // player winner variable
         const playerWinner = document.createElement("div");
-        playerWinner.textContent = "Player wins the Game!";
+        playerWinner.textContent = "You wins the Game!";
+        playerWinner.style.textAlign = "center";
+        playerWinner.style.fontSize = "30px";
         container.appendChild(playerWinner);
+        //replay variable
         let replay = document.createElement("button");
         replay.textContent = "Play again";
         replay.addEventListener("click", () => {
@@ -80,14 +84,17 @@ function game() {
           button.style.visibility = "hidden";
         });
         document.querySelector(".choice").style.visibility = "hidden";
-        document.querySelector(".player-score").style.visibility = "hidden";
-        document.querySelector(".computer-score").style.visibility = "hidden";
+        document.querySelector(".scores").style.visibility = "hidden";
         let container = document.querySelector(".container");
+        // computer variable
         const computerWinner = document.createElement("div");
         computerWinner.textContent = "Computer wins the Game!";
+        computerWinner.style.fontSize = "30px";
         container.appendChild(computerWinner);
+        //replay variable
         let replay = document.createElement("button");
         replay.textContent = "Play Again";
+        replay.style.textAlign = "center";
         replay.addEventListener("click", () => {
           window.location.reload();
         });
