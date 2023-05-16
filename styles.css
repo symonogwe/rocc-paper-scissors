@@ -8,3 +8,20 @@ body {
     background: url(images/yan-ots-UuBR5kbvt4Y-unsplash.jpg) no-repeat center center/cover;
     height: 100vh;
 }
+
+.game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    border: 3px solid red;
+    height: 260px;
+    width: 750px;
+}
+
+button {
+    width: 150px;
+}
