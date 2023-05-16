@@ -43,14 +43,14 @@ function game() {
       result === "You Loose! Scissors beats paper") {
         computerScore++;
         const computer = document.querySelector(".computer-score");
-        computer.textContent = computerScore;
+        computer.textContent = "Computer score is" + " " + computerScore;
       }
       // increment player score if player wins
       if (result === "You Win! Paper beats Rock" || result === "You Win! rock beats Scissors" || 
       result === "You Win! Scissors beats paper") {
         playerScore++;
         const player = document.querySelector(".player-score");
-        player.textContent = playerScore;
+        player.textContent = "Player score is" + " " + playerScore;
       }
       // code for when player reaches 5 points
       if (playerScore === 5) {
