@@ -63,7 +63,7 @@ function game() {
         let container = document.querySelector(".container");
         // player winner variable
         const playerWinner = document.createElement("div");
-        playerWinner.textContent = "You wins the Game!";
+        playerWinner.textContent = "You won the Game!";
         playerWinner.style.textAlign = "center";
         playerWinner.style.fontSize = "30px";
         container.appendChild(playerWinner);
@@ -87,7 +87,7 @@ function game() {
         let container = document.querySelector(".container");
         // computer variable
         const computerWinner = document.createElement("div");
-        computerWinner.textContent = "Computer wins the Game!";
+        computerWinner.textContent = "Computer won the Game!";
         computerWinner.style.textAlign = "center";
         computerWinner.style.fontSize = "30px";
         container.appendChild(computerWinner);
