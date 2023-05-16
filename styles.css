@@ -50,7 +50,14 @@ button {
     justify-content: space-around;
     align-items: center;
     margin: 20px;
-    border: 5px solid red;
     height: 90px;
     background-color: darkgrey;
+}
+
+.player-score,
+.computer-score {
+    color: azure;
+    font-size: medium;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
 }
