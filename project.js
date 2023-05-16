@@ -66,6 +66,7 @@ function game() {
         playerWinner.textContent = "You won the Game!";
         playerWinner.style.textAlign = "center";
         playerWinner.style.fontSize = "30px";
+        playerWinner.style.color = "floralWhite"
         container.appendChild(playerWinner);
         //replay variable
         let btnDiv = document.querySelector(".button-div");
@@ -90,6 +91,7 @@ function game() {
         computerWinner.textContent = "Computer won the Game!";
         computerWinner.style.textAlign = "center";
         computerWinner.style.fontSize = "30px";
+        computerWinner.style.color = "floralWhite"
         container.appendChild(computerWinner);
         //replay variable
         let btnDiv = document.querySelector(".button-div");
