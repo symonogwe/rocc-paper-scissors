@@ -39,15 +39,15 @@ function game() {
       const choice = document.querySelector(".choice");
       choice.textContent = result;
       // increment computer score if computer wins
-      if (result === "You Loose! Paper beats Rock" || result === "You Loose! Rock beats scissors" || 
-      result === "You Loose! Scissors beats paper") {
+      if (result === "You Loose this round Paper beats Rock" || result === "You Loose this round Rock beats scissors" || 
+      result === "You Loose this round Scissors beats paper") {
         computerScore++;
         const computer = document.querySelector(".computer-score");
         computer.textContent = "Computer score is" + " " + computerScore;
       }
       // increment player score if player wins
-      if (result === "You Win! Paper beats Rock" || result === "You Win! rock beats Scissors" || 
-      result === "You Win! Scissors beats paper") {
+      if (result === "You Win this round Paper beats Rock" || result === "You Win this round rock beats Scissors" || 
+      result === "You Win this round Scissors beats paper") {
         playerScore++;
         const player = document.querySelector(".player-score");
         player.textContent = "Player score is" + " " + playerScore;
